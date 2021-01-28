@@ -10,5 +10,5 @@ app.use(express.json());
 app.use(routes);
  
 var server = http.createServer(app); 
-server.listen(3060);
+server.listen(process.env.PORT || 3060);
 console.log("Servidor escutando ")
