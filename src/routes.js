@@ -6,7 +6,9 @@ const routes = express.Router();
 
 routes.post('/show')
 
-
+routes.get("/", function (req, res) {
+  return res.send("hello")
+})
 
 routes.get("/db/:id", StateController.index);
 
