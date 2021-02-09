@@ -4,13 +4,13 @@ const Sequelize = require('sequelize');
 const State = require('../models/State')
 
 
-const connection = new Sequelize(process.env.DATABASE_URL,
-  
-  {
+const connection = new Sequelize(process.env.DATABASE_URL, {
   dialect: "postgres",
   dialectOptions: {
-  rejectUnauthorized: false
-}});
+    ssl: true,
+    rejectUnauthorized: false
+  }
+});
 
 State.init(connection);
 
