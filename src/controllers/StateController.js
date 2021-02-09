@@ -32,8 +32,8 @@ module.exports = {
            resultArr.push(states[i])
          }
        }
-      res.json(resultArr)
-      return 
+      return res.json(resultArr)
+      
     }  
    },
  }
